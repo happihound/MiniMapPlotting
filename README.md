@@ -1,0 +1,2 @@
+# MiniMapPlotting
+Standalone MiniMapPlotter
