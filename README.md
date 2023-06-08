@@ -45,7 +45,7 @@ Usage
 
 You can run the MiniMap Plotter with the following command:
 
-    `python miniMapPlotter.py -mapName=<MAPNAME> -ratio=<RATIO>`
+    python miniMapPlotter.py -mapName=<MAPNAME> -ratio=<RATIO>
 
 Where:
 
@@ -57,7 +57,7 @@ Where:
 
 In order to use the program, you must run mapDataPacker.py to generate the baked keypoints. You only need to do this once, but it could take as long as an hour to complete. You can run the mapDataPacker with the following command:
 
-    `python mapDataPacker.py -mapName=<MAPNAME>`
+    python mapDataPacker.py -mapName=<MAPNAME>
 
 Where:
 
@@ -68,7 +68,7 @@ Example
 
 Here is an example of how to run the program with the map named 'WE' and the ratio '4by3':
 
-    `python miniMapPlotter.py -mapName=WE -ratio=4by3`
+    python miniMapPlotter.py -mapName=WE -ratio=4by3
 
 <p align="center"> <img src="githubImages/example_result.png" alt="Example output Map"/> </p>
 
