@@ -36,6 +36,9 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
+#Images
+*.png
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -51,6 +54,10 @@ coverage.xml
 .pytest_cache/
 cover/
 
+#other
+*.csv
+*.mp4
+
 # Translations
 *.mo
 *.pot
@@ -64,6 +71,9 @@ db.sqlite3-journal
 # Flask stuff:
 instance/
 .webassets-cache
+
+# Numpy stuff:
+*.npy
 
 # Scrapy stuff:
 .scrapy
