@@ -71,7 +71,7 @@ Here is an example of how to run the program with the map named 'WE' and the rat
 
     python miniMapPlotter.py -mapName=WE -ratio=4by3
 
-<p align="center"> <img src="githubImages/example_result.png" alt="Example output Map"/> </p>
+<p align="center"> <img src="githubImages/example_result.jpg" alt="Example output Map"/> </p>
 
 Results
 -------
