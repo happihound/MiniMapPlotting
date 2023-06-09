@@ -64,6 +64,20 @@ Where:
 *   `<MAPNAME>` is the name of the map you want to use. The valid names are 'KC', 'WE', 'OLY', 'SP', 'BM'.
 *   `<RATIO>` is the aspect ratio of the map. The valid ratios are '4by3', '16by9', '16by10'.
 
+**Additional Information**
+
+You need to provide the cropped minimap extracted from the video's frames. The minimap should be cropped to only show the minimap and nothing else.
+We provide a method of cropping shown in the `cropMinimap.py` file. You can run the cropMinimap with the following command:
+
+    python extractMiniMap.py -ratio=<RATIO>
+
+Where:
+
+*   `<RATIO>` is the aspect ratio of the map. The valid ratios are '4by3', '16by9', '16by10'.
+
+You don't need to use our code for the cropping, but it is provided as a convenience.
+
+
 Example
 -------
 
