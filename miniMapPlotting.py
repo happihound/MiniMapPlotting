@@ -225,7 +225,7 @@ if __name__ == '__main__':
         print("\t\t -ratio (optional): Aspect ratio of the map, valid ratios are:")
         print("\t\t\t- '4by3' (default)")
         print("\t\t\t- '16by9' ")
-        print("\t\t\t- '16by10'(coming soon)")
+        print("\t\t\t- '16by10'")
     else:
         args.pop(0)
         # Create a miniMapPlotter object and set the map name and aspect ratio

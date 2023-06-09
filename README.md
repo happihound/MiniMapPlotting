@@ -50,18 +50,19 @@ You can run the MiniMap Plotter with the following command:
 Where:
 
 *   `<MAPNAME>` is the name of the map you want to use. The valid names are 'KC', 'WE', 'OLY', 'SP', 'BM'.
-*   `<RATIO>` (optional) is the aspect ratio of the map. The valid ratios are '4by3' (default), '16by9', '16by10' (coming soon).
+*   `<RATIO>` (optional) is the aspect ratio of the map. The valid ratios are '4by3' (default), '16by9', '16by10'.
 
 
 **IMPORTANT**
 
 In order to use the program, you must run mapDataPacker.py to generate the baked keypoints. You only need to do this once, but it could take as long as an hour to complete. You can run the mapDataPacker with the following command:
 
-    python mapDataPacker.py -mapName=<MAPNAME>
+    python mapDataPacker.py -mapName=<MAPNAME> -ratio=<RATIO>
 
 Where:
 
 *   `<MAPNAME>` is the name of the map you want to use. The valid names are 'KC', 'WE', 'OLY', 'SP', 'BM'.
+*   `<RATIO>` is the aspect ratio of the map. The valid ratios are '4by3', '16by9', '16by10'.
 
 Example
 -------
