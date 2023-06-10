@@ -58,7 +58,7 @@ class miniMapPlotter:
         self.setMap(self.map)
 
     def main(self):
-        self.gameMap = cv2.imread('maps/'+self.ratio+'/map'+self.map+self.ratio+'.png')
+        self.gameMap = cv2.imread('maps/'+self.ratio+'/map'+self.map+self.ratio+'.jpg')
         process1 = multiprocessing.Process(target=self.miniMapPlotter, args=(self.queuedImage,))
         process2 = multiprocessing.Process(target=self.display, args=(self.queuedImage,))
         process1.start()
@@ -193,7 +193,7 @@ class miniMapPlotter:
         finalOutputBase = cv.polylines(finalOutputBase, [np.array(line, np.int32).reshape(
             (-1, 1, 2))], False, self.color, self.lineThickness, cv.LINE_AA)
         finalOutputBase = cv2.cvtColor(finalOutputBase, cv2.COLOR_BGR2RGB)
-        plt.imsave(self.outputMapPath + ' FINAL' + '.png', finalOutputBase)
+        plt.imsave(self.outputMapPath + ' FINAL' + '.jpg', finalOutputBase)
 
     def display(self, queuedImage):
         print('Displaying', end='\n\t')

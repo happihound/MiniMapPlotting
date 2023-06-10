@@ -19,7 +19,7 @@ def packKeyPoints(ratio, gameMap):
         print('Invalid aspect ratio, please enter a valid aspect ratio')
         exit()
     print('Packing Keypoints for ' + gameMap + ' ' + ratio + ' map')
-    editedImage = cv2.imread('maps/'+ratio+'/map'+gameMap+ratio+'.png')
+    editedImage = cv2.imread('maps/'+ratio+'/map'+gameMap+ratio+'.jpg')
     # More allowed features does not seem to improve the accuracy of the matching, but does greatly increase the time taken to process the image
     # The same is true for the number of layers
     featureMappingAlg = cv.SIFT_create(nOctaveLayers=25, nfeatures=250000)
@@ -34,7 +34,7 @@ def packKeyPoints(ratio, gameMap):
     desc = np.array(des1)
     print("Number of keypoints: " + str(len(kp1)))
     # Uncomment to save an image with the keypoints drawn on it
-    # plt.imsave('VerboseKeypoints.png', cv2.cvtColor(cv2.drawKeypoints(editedImage, kp1,
+    # plt.imsave('VerboseKeypoints.jpg', cv2.cvtColor(cv2.drawKeypoints(editedImage, kp1,
     #                                                                 editedImage, flags=cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS), cv2.COLOR_BGR2RGB))
     # Save the keypoints and descriptors to a file
     np.save('packedKeypoints/'+ratio+'/'+gameMap+ratio+'KeyPoints.npy', np.hstack((kpts, desc)))
