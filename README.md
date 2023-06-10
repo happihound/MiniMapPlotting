@@ -43,28 +43,7 @@ Installation
 Usage
 -----
 
-You can run the MiniMap Plotter with the following command:
-
-    python miniMapPlotter.py -mapName=<MAPNAME> -ratio=<RATIO>
-
-Where:
-
-*   `<MAPNAME>` is the name of the map you want to use. The valid names are 'KC', 'WE', 'OLY', 'SP', 'BM'.
-*   `<RATIO>` (optional) is the aspect ratio of the map. The valid ratios are '4by3' (default), '16by9', '16by10'.
-
-
-**IMPORTANT**
-
-In order to use the program, you must run mapDataPacker.py to generate the baked keypoints. You only need to do this once, but it could take as long as an hour to complete. You can run the mapDataPacker with the following command:
-
-    python mapDataPacker.py -mapName=<MAPNAME> -ratio=<RATIO>
-
-Where:
-
-*   `<MAPNAME>` is the name of the map you want to use. The valid names are 'KC', 'WE', 'OLY', 'SP', 'BM'.
-*   `<RATIO>` is the aspect ratio of the map. The valid ratios are '4by3', '16by9', '16by10'.
-
-**Additional Information**
+**Step One**
 
 You need to provide the cropped minimap extracted from the video's frames. The minimap should be cropped to only show the minimap and nothing else.
 We provide a method of cropping shown in the `cropMinimap.py` file. You can run the cropMinimap with the following command:
@@ -77,11 +56,41 @@ Where:
 
 You don't need to use our code for the cropping, but it is provided as a convenience.
 
+**Step Two**
+
+
+In order to use the program, you must run mapDataPacker.py to generate the baked keypoints. You only need to do this once, but it could take as long as an hour to complete. You can run the mapDataPacker with the following command:
+
+    python mapDataPacker.py -mapName=<MAPNAME> -ratio=<RATIO>
+
+Where:
+
+*   `<MAPNAME>` is the name of the map you want to use. The valid names are 'KC', 'WE', 'OLY', 'SP', 'BM'.
+*   `<RATIO>` is the aspect ratio of the map. The valid ratios are '4by3', '16by9', '16by10'.
+
+**Step Three**
+
+You can run the MiniMap Plotter with the following command:
+
+    python miniMapPlotter.py -mapName=<MAPNAME> -ratio=<RATIO>
+
+Where:
+
+*   `<MAPNAME>` is the name of the map you want to use. The valid names are 'KC', 'WE', 'OLY', 'SP', 'BM'.
+*   `<RATIO>` (optional) is the aspect ratio of the map. The valid ratios are '4by3' (default), '16by9', '16by10'.
+
+
+
 
 Example
 -------
 
 Here is an example of how to run the program with the map named 'WE' and the ratio '4by3':
+
+
+    python extractMiniMap.py -ratio=4by3
+    
+    python mapDataPacker.py -mapName=WE -ratio=4by3
 
     python miniMapPlotter.py -mapName=WE -ratio=4by3
 
